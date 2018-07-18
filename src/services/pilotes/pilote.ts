@@ -3,4 +3,5 @@ export interface Pilote {
     prenom: String;
     nom: String;
     marque: String; 
+    description: String;
  }

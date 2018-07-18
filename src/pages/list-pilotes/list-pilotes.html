@@ -3,14 +3,15 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Liste Pilotes</ion-title>
+    <ion-title>Liste des Pilotes</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items">
-      {{item.prenom}}
+    <button ion-item *ngFor="let item of items" (click)="goToDetail(item)">
+      <ion-icon name="body" item-start></ion-icon>
+      {{item.prenom}}  {{item.nom}}
     </button>
   </ion-list>
 </ion-content>

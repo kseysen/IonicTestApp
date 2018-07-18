@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.prenom}} {{item.nom}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="edit()">
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="item.nom" name="nom" [readonly]="false"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prénom</ion-label>
+      <ion-input type="text" [(ngModel)]="item.prenom" name="prenom" [readonly]="false"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Marque</ion-label>
+      <ion-input type="text" [(ngModel)]="item.marque" name="marque"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea [(ngModel)]="item.description" name="description"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Enregistrer</button>
+  </form>
+    
+</ion-content>

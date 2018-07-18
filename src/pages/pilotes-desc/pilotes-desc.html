@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.prenom}} {{item.nom}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card>       
+  <ion-img width="300" height="150" src="http://placehold.it/300x150"></ion-img>
+  <ion-card-content>
+    <ion-item>
+      Marque : {{item.marque}}
+    </ion-item>
+    <ion-item>
+      Description : {{item.description}}
+    </ion-item>
+
+  </ion-card-content>
+  <ion-fab right bottom>
+    <button ion-fab (click)="edit(item)">
+      <ion-icon name="brush"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-card>
+  
+</ion-content>

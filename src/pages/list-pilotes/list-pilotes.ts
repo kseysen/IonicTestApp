@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild  } from '@angular/core';
+import { NavController, NavParams , Nav} from 'ionic-angular';
 
 import { PiloteService } from '../../services/pilotes/pilotes.service'
 import { Pilote } from '../../services/pilotes/Pilote'
+import { PilotesDescPage } from '../../pages/pilotes-desc/pilotes-desc'
 
 @Component({
   selector: 'page-list-pilotes',
   templateUrl: 'list-pilotes.html',
 })
 export class ListPilotesPage {
-  
+  @ViewChild(Nav) nav: Nav;
   selectedItem: any;
   items: Pilote[];
 
@@ -23,8 +24,8 @@ export class ListPilotesPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListPilotesPage');
+  goToDetail(item : Pilote) {
+    this.navCtrl.push(PilotesDescPage, item);
   }
 
 }
