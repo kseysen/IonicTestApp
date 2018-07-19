@@ -6,14 +6,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { ListPilotesPage } from '../pages/list-pilotes/list-pilotes'
-import { PilotesDescPage } from '../pages/pilotes-desc/pilotes-desc'
-import { PilotesUpdatePage } from '../pages/pilotes-update/pilotes-update'
+import { ListPilotesPage } from '../pages/list-pilotes/list-pilotes';
+import { PilotesDescPage } from '../pages/pilotes-desc/pilotes-desc';
+import { PilotesUpdatePage } from '../pages/pilotes-update/pilotes-update';
+import { ListSurfacesPage } from '../pages/list-surfaces/list-surfaces';
+import { ListSetupsPage } from '../pages/list-setups/list-setups';
+import { SetupDescPage } from '../pages/setup-desc/setup-desc';
+import { SetupUpdatePage } from '../pages/setup-update/setup-update';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { PiloteService } from '../services/pilotes/pilotes.service';
+import { SurfaceService } from '../services/surfaces/surface.service';
+import { SetupService } from '../services/setups/setup.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,11 @@ import { PiloteService } from '../services/pilotes/pilotes.service';
     ListPage,
     ListPilotesPage,
     PilotesDescPage,
-    PilotesUpdatePage
+    PilotesUpdatePage,
+    ListSurfacesPage,
+    ListSetupsPage,
+    SetupDescPage,
+    SetupUpdatePage
   ],
   imports: [
     BrowserModule,
@@ -36,13 +47,19 @@ import { PiloteService } from '../services/pilotes/pilotes.service';
     ListPage,
     ListPilotesPage,
     PilotesDescPage,
-    PilotesUpdatePage
+    PilotesUpdatePage,
+    ListSurfacesPage,
+    ListSetupsPage,
+    SetupDescPage,
+    SetupUpdatePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PiloteService
+    PiloteService,
+    SurfaceService,
+    SetupService
   ]
 })
 export class AppModule {}

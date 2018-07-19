@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Liste des Surfaces</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="goToList(item)">
+      <ion-icon name="partly-sunny" item-start></ion-icon>
+      {{item.name}}
+    </button>
+  </ion-list>
+</ion-content>

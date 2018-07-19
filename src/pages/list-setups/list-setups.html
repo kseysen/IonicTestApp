@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Liste des Setups</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let setup of setups" (click)="goToSetup(setup)">
+      <ion-icon name="copy" item-start></ion-icon>
+      {{setup.piste}} / {{setup.date}}
+    </button>
+  </ion-list>
+</ion-content>
