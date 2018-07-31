@@ -11,4 +11,17 @@ export class SetupService {
     return this.httpClient
       .get<any[]>('http://localhost:3000/setups/' + data.name);
   }
+
+  public editSetup(data) {
+    return this.httpClient.put('http://localhost:3000/setups/' + data._id, data);
+  }
+
+  public addSetup(data) {
+    return this.httpClient.post('http://localhost:3000/setups', data);   
+  }
+
+  public deleteSetup(data) {
+    return this.httpClient.delete('http://localhost:3000/setups/' + data._id, data);
+  }
+
 }           

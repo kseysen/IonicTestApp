@@ -13,6 +13,7 @@ import { ListSurfacesPage } from '../pages/list-surfaces/list-surfaces';
 import { ListSetupsPage } from '../pages/list-setups/list-setups';
 import { SetupDescPage } from '../pages/setup-desc/setup-desc';
 import { SetupUpdatePage } from '../pages/setup-update/setup-update';
+import { SetupAddPage } from '../pages/setup-add/setup-add';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PiloteService } from '../services/pilotes/pilotes.service';
 import { SurfaceService } from '../services/surfaces/surface.service';
 import { SetupService } from '../services/setups/setup.service';
+import { ImagesProvider } from '../providers/images/images';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SetupService } from '../services/setups/setup.service';
     ListSurfacesPage,
     ListSetupsPage,
     SetupDescPage,
-    SetupUpdatePage
+    SetupUpdatePage,
+    SetupAddPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { SetupService } from '../services/setups/setup.service';
     ListSurfacesPage,
     ListSetupsPage,
     SetupDescPage,
-    SetupUpdatePage
+    SetupUpdatePage,
+    SetupAddPage
   ],
   providers: [
     StatusBar,
@@ -59,7 +63,8 @@ import { SetupService } from '../services/setups/setup.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PiloteService,
     SurfaceService,
-    SetupService
+    SetupService,
+    ImagesProvider
   ]
 })
 export class AppModule {}

@@ -22,7 +22,17 @@
       </ion-item>
   
     </ion-card-content>
-    </ion-fab>
   </ion-card>
+  <ion-fab left bottom>
+    <button ion-fab color="danger" (click)="delete(item)">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-fab right bottom>
+    <button ion-fab (click)="edit(item)">
+      <ion-icon name="brush"></ion-icon>
+    </button>
+  </ion-fab>
+
   
 </ion-content>

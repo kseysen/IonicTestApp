@@ -4,6 +4,7 @@ import { SetupService } from '../../services/setups/setup.service';
 import { Surface } from '../../services/surfaces/Surface';
 import { Setup } from '../../services/setups/setup';
 import { SetupDescPage } from '../../pages/setup-desc/setup-desc';
+import { SetupAddPage } from '../../pages/setup-add/setup-add';
 
 
 @Component({
@@ -27,6 +28,10 @@ export class ListSetupsPage {
 
   goToSetup(item : Setup) {
     this.navCtrl.push(SetupDescPage, item);
+  }
+
+  addSetup() {
+    this.navCtrl.push(SetupAddPage, this.item);
   }
 
 }

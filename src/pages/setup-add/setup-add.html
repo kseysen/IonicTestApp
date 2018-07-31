@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>{{item.piste}} / {{item.date}}</ion-title>
+    <ion-title>Ajouter un Setup</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -18,13 +18,13 @@
     </ion-item>
     <ion-item>
       <ion-label>Surface</ion-label>
-      <ion-input type="text" [(ngModel)]="item.surface" name="surface"></ion-input>
+      <ion-input type="text" [(ngModel)]="item.surface" name="surface" readonly="true">test</ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Pilote</ion-label>
-      <ion-textarea [(ngModel)]="item.pilote" name="pilote"></ion-textarea>
+      <ion-input [(ngModel)]="item.pilote" name="pilote" ></ion-input>
     </ion-item>
-    <button ion-button (click)="edit()" block>Enregistrer</button>
+    <button ion-button (click)="add()" block>Ajouter</button>
   </form>
     
 </ion-content>

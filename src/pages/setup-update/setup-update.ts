@@ -10,6 +10,7 @@ import { SetupService } from '../../services/setups/setup.service';
 export class SetupUpdatePage {
 
   item: Setup;
+  bool: Boolean;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -18,6 +19,13 @@ export class SetupUpdatePage {
   }
 
   edit(){
-   
+      this
+      .setupService
+      .editSetup(this.item)
+      .subscribe(response => response,
+      error => console.log(error)
+      );
+    this.navCtrl.pop();
   }
+
 }

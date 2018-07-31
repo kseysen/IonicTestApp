@@ -19,4 +19,6 @@ export class PilotesDescPage {
     this.navCtrl.push(PilotesUpdatePage, item);
   }
 
+
+
 }
