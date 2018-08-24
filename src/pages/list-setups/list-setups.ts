@@ -3,8 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { SetupService } from '../../services/setups/setup.service';
 import { Surface } from '../../services/surfaces/Surface';
 import { Setup } from '../../services/setups/setup';
-import { SetupDescPage } from '../../pages/setup-desc/setup-desc';
-import { SetupAddPage } from '../../pages/setup-add/setup-add';
+import { SetupDescPage } from '../setup-desc/setup-desc';
+import { SetupAddPage } from '../setup-add/setup-add';
 
 
 @Component({

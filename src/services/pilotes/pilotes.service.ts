@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class PiloteService {
   baseUrl: string = "https://radiant-anchorage-58124.herokuapp.com/";
-  baseUrlLocal: String = "http://localhost:3000/";
+  //baseUrl: String = "http://localhost:3000/";
   constructor(private httpClient: HttpClient) { }
 
   public getPilotesFromServer() {

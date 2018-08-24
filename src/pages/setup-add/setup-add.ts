@@ -4,7 +4,7 @@ import { Setup } from '../../services/setups/setup';
 import { SetupService } from '../../services/setups/setup.service';
 import { Surface } from '../../services/surfaces/Surface';
 import { AlertController } from 'ionic-angular';
-import { HomePage } from '../../pages/home/home';
+import { HomePage } from '../home/home';
 
 
 @Component({

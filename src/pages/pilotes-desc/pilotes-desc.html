@@ -6,22 +6,26 @@
 
 <ion-content padding>
 
-<ion-card>       
-  <ion-img width="300" height="150" src="http://placehold.it/300x150"></ion-img>
+  <img name="foo" [src]="imageUrl" *ngIf="imageUrl" />
+  <ion-card>       
   <ion-card-content>
+    
     <ion-item>
       Marque : {{item.marque}}
     </ion-item>
     <ion-item>
       Description : {{item.description}}
     </ion-item>
-
   </ion-card-content>
-  <ion-fab right bottom>
+  
+</ion-card>
+<ion-fab right bottom>
     <button ion-fab (click)="edit(item)">
       <ion-icon name="brush"></ion-icon>
     </button>
   </ion-fab>
-</ion-card>
+<ion-fab left bottom>
+  <button ion-fab (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+</ion-fab>
   
 </ion-content>

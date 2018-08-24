@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SurfaceService } from '../../services/surfaces/surface.service'
 import { Surface } from '../../services/surfaces/Surface'
-import { ListSetupsPage } from '../../pages/list-setups/list-setups'
+import { ListSetupsPage } from '../list-setups/list-setups'
 
 
 @Component({

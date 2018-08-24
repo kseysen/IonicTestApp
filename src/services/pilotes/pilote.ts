@@ -4,4 +4,5 @@ export interface Pilote {
     nom: String;
     marque: String; 
     description: String;
+    imageId: String;
  }

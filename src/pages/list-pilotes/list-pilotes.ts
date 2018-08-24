@@ -3,7 +3,7 @@ import { NavController, NavParams , Nav} from 'ionic-angular';
 
 import { PiloteService } from '../../services/pilotes/pilotes.service'
 import { Pilote } from '../../services/pilotes/Pilote'
-import { PilotesDescPage } from '../../pages/pilotes-desc/pilotes-desc'
+import { PilotesDescPage } from '../pilotes-desc/pilotes-desc'
 
 @Component({
   selector: 'page-list-pilotes',
